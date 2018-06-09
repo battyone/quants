@@ -99,7 +99,7 @@ for symbol in symbols:
 	# R square
 	r2_score = linear.score(X[t:],y[t:])*100  
 	if  r2_score < 95 :
-		print symbol + ": R2 Score of " +  float("{0:.2f}".format(r2_score)) + " is too low, symbol rejected"
+		print symbol + ": R2 Score of " +  str(float("{0:.2f}".format(r2_score))) + " is too low, symbol rejected"
 	else:	
 		print symbol + ": m1 = " + str(round(linear.coef_[0],2)) + "; m2 = " + str(round(linear.coef_[1],2)) + "; c = " + str(round(linear.intercept_,2)) + "; R2 Score: " + str(float("{0:.2f}".format(r2_score))) + "%"
 	#print float("{0:.2f}".format(r2_score))
