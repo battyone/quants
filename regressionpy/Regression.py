@@ -100,11 +100,11 @@ for symbol in symbols:
 	# R square
 	r2_score = linear.score(X[t:],y[t:])*100  
 	
-	results.append([float("{0:.2f}".format(r2_score)),str(round(linear.coef_[0],2)),str(round(linear.coef_[1],2)),str(round(linear.intercept_,2)) ]);
+	results.append([float("{0:.2f}".format(r2_score)),str(round(linear.coef_[0],2)),str(round(linear.coef_[1],2)),str(round(linear.intercept_,2)),symbol]);
 
 for r in sorted(results, key=lambda result: result[0], reverse=True):	
 	if  r[0] < 95 :
-		print symbol + ": R2 Score of " +  str(float("{0:.2f}".format(r2_score))) + " is too low, symbol rejected"
+		print r[4] + ": R2 Score of " +  str(float("{0:.2f}".format(r2_score))) + " is too low, symbol rejected"
 	else:	
-		print symbol + ": m1 = " + r[1] + "; m2 = " + r[2] + "; c = " + r[3] + "; R2 Score: " + str(r[0]) + "%"
+		print r[4] + ": m1 = " + r[1] + "; m2 = " + r[2] + "; c = " + r[3] + "; R2 Score: " + str(r[0]) + "%"
 	#print float("{0:.2f}".format(r2_score))
