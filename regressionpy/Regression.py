@@ -85,12 +85,12 @@ print ( X_test[len(X_test)-7:])
 predicted_price = linear.predict(X_test)
 print(predicted_price[len(predicted_price)-7:])
 
-#predicted_price = pd.DataFrame(predicted_price,index=y_test.index,columns = ['price'])  
-#predicted_price.plot(figsize=(10,5))  
-#y_test.plot()  
-#plt.legend(['predicted_price','actual_price'])  
-#plt.ylabel(symbol + " Price")  
-#plt.show()
+predicted_price = pd.DataFrame(predicted_price,index=y_test.index,columns = ['price'])  
+predicted_price.plot(figsize=(10,5))  
+y_test.plot()  
+plt.legend(['predicted_price','actual_price'])  
+plt.ylabel(symbol + " Price")  
+plt.show()
 
 #for bar in predicted_price:
 #    print bar
