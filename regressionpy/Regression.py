@@ -104,7 +104,7 @@ for symbol in symbols:
 
 for r in sorted(results, key=lambda result: result[0], reverse=True):	
 	if  r[0] < 95 :
-		print r[4] + ": R2 Score of " +  str(float("{0:.2f}".format(r2_score))) + " is too low, symbol rejected"
+		print r[4] + ": R2 Score of " +  str(r[0]) + " is too low, symbol rejected"
 	else:	
 		print r[4] + ": m1 = " + r[1] + "; m2 = " + r[2] + "; c = " + r[3] + "; R2 Score: " + str(r[0]) + "%"
 	#print float("{0:.2f}".format(r2_score))
